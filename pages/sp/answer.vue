@@ -1,14 +1,25 @@
 
 <template lang='pug'>
 	.container
-		.content-inner
+		.container__inner
 			
 			.question
-				p.question-text これはなんでしょうか？
+				p.question__text これはなんでしょうか？
 			.option
-				a.button.is-medium.is-fullwidth ①
+				.button.is-medium.is-fullwidth ①
+				.button.is-medium.is-fullwidth ①
+				.button.is-medium.is-fullwidth ①
 </template>
 
-<style>
+<style lang="sass">
+.container 
+	&__inner 
+		padding: 40px 4%;
+
+	.question
+		&__text
+	
+	.option
+	
 
 </style>
