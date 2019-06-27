@@ -5,7 +5,6 @@
         p.userData__inner
           span.userData__text {{ user.name }} さんのポイント
           span.userData__text {{ user.point }}pt
-      
       section.question
         .question
           span.question__number Q{{ currentStatus.questionNo }}
@@ -23,6 +22,7 @@
   </template>
 
 <script>
+
 export default {
   data() {
     return {
@@ -42,7 +42,7 @@ export default {
       questionAnswers: [
         {
           id: 1,
-          statement: "大原"
+          statement: "わわわわあああああああああああああああｗｗｗｗｗｗｗｗっわ"
         },
         {
           id: 2,
@@ -74,13 +74,29 @@ body
   font-size: 16px;
   font-family: "M PLUS Rounded 1c";
   color: $text-main-color;
-  background-color: $base-color;
+  background-color: #fff;
   font-weight: bold;
+
+input[type="submit"],
+input[type="button"] 
+  border-radius: 0;
+  -webkit-box-sizing: content-box;
+  -webkit-appearance: button;
+  appearance: button;
+  border: none;
+  box-sizing: border-box
+
+  &::-webkit-search-decoration 
+    display: none;
+  
+  &::focus 
+    outline-offset: -2px;
+    
 
 .container 
   width: 100%;
   height: 100vh;
-  padding: 40px;
+  padding: 40px 24px;
 
   &__inner 
     min-height: 100%;
@@ -90,19 +106,21 @@ body
     flex-direction: column;
 
 .userData
-  background-color: $secondary-color;
-  width: 92vw;
+  background-color: $primary-color;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  width: 100vw;
   margin-bottom: 20px;
   position: fixed;
-  top: 4vh;
+  top: 0;
+  color: white;
 
   &__inner
-    padding: 10px;
+    padding: 24px;
     display: flex;
     justify-content: space-between
 
   &__text 
-    font-size: 14px;
+    font-size: 16px;
 
 .question 
   text-align: center;
@@ -117,23 +135,32 @@ body
     border: 2px solid $text-main-color;
     margin-bottom: 12px;
   
-  &.__sentence 
-    font-size: 24px;
+  &__sentence 
+    font-size: 20px;
 
 .choice
   .choiceList 
     li 
-      padding: 10px;
-      border: 1px solid $primary-color;
+      padding: 10px
+      border-radius: 8px
+      background-color: #fff;
+      border: 2px solid $primary-color
+      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
       
       &:not(:last-child) 
-        margin-bottom: 10px;
+        margin-bottom: 24px;
 
       button
-        font-size: 24px;
-    &.is-active
-      background-color: $primary-color;
-      color: #fff;
+        display: block
+        width: 100%;
+        height: 100%;
+        font-size: 18px;
+        font-weight: 800
 
+      &.is-active
+        background-color: $primary-color
+        border: 2px solid #fff
 
+        button
+          color: #fff
 </style>
