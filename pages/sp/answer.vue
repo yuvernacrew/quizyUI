@@ -1,25 +1,36 @@
+<template lang="pug">
+  section.container
+    //TODO(cheese): 画像の差し替え！
+    .correct(v-show='correct')
+      img(src='~/assets/images/correct.png')
+    .incorrect(v-show='!correct')
+      img(src='~/assets/images/incorrect.png')
 
-<template lang='pug'>
-	.container
-		.container__inner
-			
-			.question
-				p.question__text これはなんでしょうか？
-			.option
-				.button.is-medium.is-fullwidth ①
-				.button.is-medium.is-fullwidth ①
-				.button.is-medium.is-fullwidth ①
+    p 正解は　ーーー です。
+    .correct(v-show='correct')
+      p 33pt ゲット！！
 </template>
 
-<style lang="sass">
-.container 
-	&__inner 
-		padding: 40px 4%;
+<script>
+export default {
+  data() {
+    return {
+      correct: true
+    }
+  }
+}
+</script>
 
-	.question
-		&__text
-	
-	.option
-	
+<style lang="sass">
+
+.container
+  &--inner 
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  
+
 
 </style>

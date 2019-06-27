@@ -1,0 +1,36 @@
+//@import 'base/setting.scss';
+
+// @import 'modules/button.scss';
+// @import 'modules/foundation.scss';
+// @import 'modules/button.scss';
+
+$primary-color: #FCC205;
+$secondary-color: #FFF598;
+$base-color: #FFFEE6; 
+$text-main-color: #44443F;
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: $base-color;
+  font-size: 16px;
+  font-family: "M PLUS Rounded 1c";
+  color: $text-main-color;
+  background-color: $base-color;
+
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  padding: 40px;
+  
+  &--inner {
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
